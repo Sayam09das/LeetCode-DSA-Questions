@@ -25,6 +25,6 @@ public:
             return false;
         }
 
-        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right); //recursively check two nodes companre(p,q)
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right); //recursively check two nodes compare(p,q)
     }
 };

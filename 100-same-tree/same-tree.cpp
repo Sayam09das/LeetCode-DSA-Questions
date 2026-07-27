@@ -13,18 +13,18 @@ class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
         
-        if(p == nullptr && q == nullptr){
+        if(p == nullptr && q == nullptr){ //check nodes == null 
             return true;
         }
-        if(p == nullptr || q== nullptr){
+        if(p == nullptr || q== nullptr){ //check one nodes == null, is other not
             return false;
         }
 
        
-        if(p->val != q->val){
+        if(p->val != q->val){ //check nodes value
             return false;
         }
 
-        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right); //recursively check two nodes companre(p,q)
     }
 };
